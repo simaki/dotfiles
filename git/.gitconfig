@@ -2,7 +2,7 @@
 	name = Shota Imaki
 	email = shota.imaki.0801@gmail.com
 [core]
-	excludesfile = $HOME/.gitignore_global
+	excludesfile = /Users/simaki/.gitignore_global
   editor = nvim
 	ignorecase = false
 	quotepath = false
@@ -27,8 +27,8 @@
     branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
   }; __checkout_fzf"
   delete-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
-  flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > $HOME/.gfr.md \
-    && view +$(grep -n \"$(grep '^###' $HOME/.gfr.md | sort | fzf)\" $HOME/.gfr.md | cut -f1 -d:) $HOME/.gfr.md"
+  flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > /tmp/git-flight-rules.md \
+    && view +$(grep -n \"$(grep '^###' /tmp/git-flight-rules.md | sort | fzf)\" /tmp/git-flight-rules.md | cut -f1 -d:) /tmp/git-flight-rules.md"
 [init]
   defaultBranch = main
 [github]
