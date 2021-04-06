@@ -1,2 +1,2 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin
-0 3 * * * sh $HOME/update.sh >& $HOME/.cron.log && python3 $HOME/post_to_slack.py
+0 3 * * * sh $HOME/update.sh >& $HOME/.cron.log
