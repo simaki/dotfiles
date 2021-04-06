@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+if [ -z "$1" ]; then
+  echo "cpprun: Compile and run. Usage: cpprun [PATH]"
+else
+  out=$(basename $1 .cpp).out
+  g++ $1 -o $out && ./$out
+fi
+
+

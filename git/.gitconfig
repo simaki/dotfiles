@@ -1,0 +1,47 @@
+[user]
+	name = Shota Imaki
+	email = shota.imaki.0801@gmail.com
+[core]
+	excludesfile = /Users/simaki/.gitignore_global
+  editor = nvim
+	ignorecase = false
+	quotepath = false
+[pull]
+  rebase = false
+[alias]
+  a = add
+  c = commit -m
+  s = status
+  b = branch
+  ps = push
+  pl = pull
+  co = checkout
+  cob = checkout -b
+  cof = checkoutf
+  com = checkout main
+  af = addf
+  reword = !git commit --amend --only
+  addf = !find $(git rev-parse --show-toplevel) | fzf | git add
+  checkoutf = "!__checkout_fzf() { \
+    local branches branch; \
+    branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
+  }; __checkout_fzf"
+  delete-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > $HOME/.gfr.md \
+    && view +$(grep -n \"$(grep '^###' $HOME/.gfr.md | sort | fzf)\" $HOME/.gfr.md | cut -f1 -d:) $HOME/.gfr.md"
+[init]
+  defaultBranch = main
+[github]
+	user = simaki
+[color]
+	ui = true
+[push]
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/simaki/.stCommitMsg

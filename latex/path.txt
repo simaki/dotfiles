@@ -1,0 +1,4 @@
+Paths
+
+* sty: $(brew --prefix)/texlive/2019basic/texmf-dist/tex/latex/
+* bst: $(brew --prefix)/texlive/2019basic/texmf-dist/bibtex/bst/

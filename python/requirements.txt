@@ -1,0 +1,15 @@
+black
+flake8
+isort
+jupyterlab
+jupyterlab-code-formatter
+matplotlib
+numpy
+pandas
+poetry
+pynvim
+pytest
+scikit-learn
+seaborn
+tqdm
+torch

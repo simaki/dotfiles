@@ -1,0 +1,83 @@
+{
+    "debug.console.fontSize": 10,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSurroundingLines": 16,
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 10,
+    "editor.lineNumbers": "off",
+    "editor.minimap.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.occurrencesHighlight": false,
+    "editor.renderIndentGuides": false,
+    "editor.renderLineHighlight": "none",
+    "editor.smoothScrolling": true,
+    "editor.suggestSelection": "first",
+    "editor.wordWrap": "on",
+    "files.exclude": {
+        "**/.ipynb_checkpoints": true,
+        "**/.pytest_cache": true,
+        "**/__pycache__/": true,
+        "*.py[cod]": true,
+        ".vscode/*": true,
+    },
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "jupyter.alwaysTrustNotebooks": true,
+    "jupyter.askForKernelRestart": false,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "python.defaultInterpreterPath": "\"$(brew --prefix)/bin/python@${PYTHON_VERSION}:$PATH\"",
+    "python.formatting.blackArgs": ["--line-length", "88", "--skip-magic-trailing-comma"],
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black",
+    "python.pythonPath": "/usr/local/bin/python3",
+    "python.sortImports.args": ["--force-single-line"],
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": ["--max-line-length", "88", "--ignore=E203,W503"],
+    "python.linting.lintOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "scm.diffDecorationsGutterVisibility": "hover",
+    "terminal.integrated.fontSize": 10,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // nnoremap
+        {"before": ["H"], "after": ["0"]},
+        {"before": ["L"], "after": ["$"]},
+        {"before": ["Y"], "after": ["y", "$"]},
+        {"before": ["K"], "after": ["i", "<CR>", "<Esc>"]},
+        {"before": ["+"], "after": ["<C-a>"]},
+        {"before": ["-"], "after": ["<C-x>"]},
+        {"before": ["<CR>"], "after": ["o", "<Esc>"]},
+        {"before": ["<TAB>"], "after": ["i", "<TAB>", "Esc"]},
+        {"before": ["<SPACE>"], "after": ["i", "<SPACE>", "Esc", "l"]},
+        {"before": ["n"], "after": ["n", "z", "z"]},
+        {"before": ["N"], "after": ["N", "z", "z"]},
+        {"before": ["<Esc>", "<Esc>"], "after": [":", "n", "o", "h", "<CR>", "<Esc>"]},
+        // TODO: enable it only when python
+        {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]},
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        // inoremap
+        {"before": ["j", "k"], "after": ["<Esc>"]},
+    ],
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "GitHub Light",
+    "workbench.iconTheme": null,
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.startupEditor": "none",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "yaml.schemas": {
+        "file:///Users/simaki/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+}
