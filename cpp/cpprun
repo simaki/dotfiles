@@ -6,5 +6,3 @@ else
   out=$(basename $1 .cpp).out
   g++ $1 -o $out && ./$out
 fi
-
-
