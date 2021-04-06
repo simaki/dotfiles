@@ -2,7 +2,7 @@
 	name = Shota Imaki
 	email = shota.imaki.0801@gmail.com
 [core]
-	excludesfile = /Users/simaki/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
   editor = nvim
 	ignorecase = false
 	quotepath = false
