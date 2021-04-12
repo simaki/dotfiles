@@ -18,7 +18,7 @@ ln -fs $HOME/dotfiles/vscode/keybindings.json $HOME/Library/Application\ Support
 ln -fs $HOME/dotfiles/vscode/settings.json $HOME/Library/Application\ Support/Code/User/
 
 while read line; do
-  code --install-extension $line
+  code-insiders --install-extension $line
 done < extensions.txt
 
 echo '--- VSCode setup end ---'

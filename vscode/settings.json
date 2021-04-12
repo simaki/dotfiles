@@ -19,7 +19,7 @@
         "**/.pytest_cache": true,
         "**/__pycache__/": true,
         "*.py[cod]": true,
-        ".vscode/*": true,
+        ".vscode/*": true
     },
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
@@ -32,10 +32,10 @@
     "python.formatting.provider": "black",
     "python.pythonPath": "/usr/local/bin/python3",
     "python.sortImports.args": ["--force-single-line"],
+    "python.linting.enabled": false,
     "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--max-line-length", "88", "--ignore=E203,W503"],
-    "python.linting.lintOnSave": true,
+    "python.linting.lintOnSave": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
@@ -56,24 +56,23 @@
         {"before": ["N"], "after": ["N", "z", "z"]},
         {"before": ["<Esc>", "<Esc>"], "after": [":", "n", "o", "h", "<CR>", "<Esc>"]},
         // TODO: enable it only when python
-        {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]},
+        {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         // inoremap
-        {"before": ["j", "k"], "after": ["<Esc>"]},
+        {"before": ["j", "k"], "after": ["<Esc>"]}
     ],
     "vim.hlsearch": true,
     "vim.ignorecase": true,
     "vim.smartcase": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "GitHub Light",
     "workbench.iconTheme": null,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": [
         {
-            "viewType": "jupyter.notebook.ipynb",
+            "viewType": "jupyter-notebook",
             "filenamePattern": "*.ipynb"
         }
     ],
@@ -81,4 +80,8 @@
         "file:///Users/simaki/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "breadcrumbs.enabled": false,
+    "workbench.colorTheme": "GitHub Light",
+    "python.insidersChannel": "weekly",
+    "breadcrumbs.enabled": false,
+    "editor.lightbulb.enabled": false
 }
