@@ -32,10 +32,11 @@
     "python.formatting.provider": "black",
     "python.pythonPath": "/usr/local/bin/python3",
     "python.sortImports.args": ["--force-single-line"],
+    "python.linting.enabled": false,
     "python.linting.pylintEnabled": false,
-    "python.linting.flake8Enabled": true,
+    // "python.linting.flake8Enabled": true,
     "python.linting.flake8Args": ["--max-line-length", "88", "--ignore=E203,W503"],
-    "python.linting.lintOnSave": true,
+    "python.linting.lintOnSave": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.python"
     },
@@ -67,17 +68,20 @@
     "vim.smartcase": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "GitHub Light",
     "workbench.iconTheme": null,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": [
         {
-            "viewType": "jupyter.notebook.ipynb",
+            "viewType": "jupyter-notebook",
             "filenamePattern": "*.ipynb"
         }
     ],
     "yaml.schemas": {
         "file:///Users/simaki/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
+    "workbench.colorTheme": "GitHub Light",
+    "python.insidersChannel": "weekly",
+    "breadcrumbs.enabled": false,
+    "editor.lightbulb.enabled": false,
 }
