@@ -80,4 +80,5 @@
     "yaml.schemas": {
         "file:///Users/simaki/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
+    "breadcrumbs.enabled": false,
 }
