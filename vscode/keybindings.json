@@ -126,11 +126,6 @@
         "when": "notebookEditorFocused"
     },
     {
-        "key": "shift+k",
-        "command": "notebook.cell.split",
-        "when": "notebookCellEditable && notebookCellEditorFocused && notebookEditable && notebookEditorFocused && !notebookEditorCursorAtEditorBeginEnd"
-    },
-    {
         "key": "cmd+k shift+cmd+\\",
         "command": "-notebook.cell.split",
         "when": "notebookCellEditable && notebookCellEditorFocused && notebookEditable && notebookEditorFocused && !notebookEditorCursorAtEditorBeginEnd"
