@@ -80,8 +80,8 @@
         "file:///Users/simaki/.vscode/extensions/atlassian.atlascode-2.8.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "breadcrumbs.enabled": false,
-    "workbench.colorTheme": "GitHub Light",
     "python.insidersChannel": "weekly",
     "breadcrumbs.enabled": false,
-    "editor.lightbulb.enabled": false
+    "editor.lightbulb.enabled": false,
+    "workbench.colorTheme": "GitHub Light Default"
 }
