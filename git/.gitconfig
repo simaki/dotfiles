@@ -1,47 +1,43 @@
 [user]
-	name = Shota Imaki
-	email = shota.imaki.0801@gmail.com
+  name = Shota Imaki
+  email = shota.imaki.0801@gmail.com
 [core]
-	excludesfile = /Users/simaki/.gitignore_global
   editor = nvim
-	ignorecase = false
-	quotepath = false
+  ignorecase = false
+  quotepath = false
 [pull]
   rebase = false
 [alias]
   a = add
+  b = branch
   c = commit -m
   s = status
-  b = branch
-  ps = push
   pl = pull
+  ps = push
   co = checkout
   cob = checkout -b
-  cof = checkoutf
-  com = checkout main
-  af = addf
+  cof = checkout-fzf
+  af = add-fzf
   reword = !git commit --amend --only
-  addf = !find $(git rev-parse --show-toplevel) | fzf | git add
-  checkoutf = "!__checkout_fzf() { \
+  # Fuzzy-find a resource and then add.
+  add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
+  # Fuzzy-find a branch and then checkout.
+  checkout-fzf = "!__checkout_fzf() { \
     local branches branch; \
     branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
   }; __checkout_fzf"
+  # Delete merged branches.
   delete-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  # Show git-flight-rules.
   flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > /tmp/git-flight-rules.md \
     && view +$(grep -n \"$(grep '^###' /tmp/git-flight-rules.md | sort | fzf)\" /tmp/git-flight-rules.md | cut -f1 -d:) /tmp/git-flight-rules.md"
 [init]
   defaultBranch = main
 [github]
-	user = simaki
+  user = simaki
 [color]
-	ui = true
+  ui = true
 [push]
-	default = current
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  default = current
 [commit]
-	template = /Users/simaki/.stCommitMsg
+  template = $HOME/.stCommitMsg
