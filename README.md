@@ -1,6 +1,6 @@
 # dotfiles
 
-[![CI](https://github.com/simaki/dotfiles/workflows/CI/badge.svg)](https://github.com/simaki/dotfiles/actions?query=workflow%3ACI)
+[![CI](https://github.com/simaki/dotfiles/actions/workflows/ci.yml/badge.svg)](https://github.com/simaki/dotfiles/actions/workflows/ci.yml)
 
 ```sh
 $ curl -fsS https://raw.githubusercontent.com/simaki/dotfiles/sync/install.sh | sh
