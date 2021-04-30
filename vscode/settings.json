@@ -81,7 +81,8 @@
     },
     "breadcrumbs.enabled": false,
     "python.insidersChannel": "weekly",
-    "breadcrumbs.enabled": false,
     "editor.lightbulb.enabled": false,
-    "workbench.colorTheme": "GitHub Light Default"
+    "workbench.colorTheme": "GitHub Light Default",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.languageServer": "Pylance"
 }

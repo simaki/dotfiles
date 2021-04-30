@@ -2,20 +2,17 @@ let g:polyglot_disabled = ['ftdetect']
 call plug#begin('~/.vim/plugged')
 Plug 'acarapetis/vim-colors-github'
 Plug 'alfredodeza/pytest.vim'
-Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'fatih/vim-go', {'for': 'go', 'do': ':GoUpdateBinaries'}
 Plug 'fisadev/vim-isort', {'for': 'python', 'on': 'Isort'}
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'lervag/vimtex', {'for': 'tex'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'psf/black', {'for': 'python', 'on': 'Black'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'sheerun/vim-polyglot', {'on': []}
 Plug 'Shougo/denite.nvim'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/vimproc.vim', {'do': 'make'}
 Plug 'thinca/vim-quickrun', {'on': 'QuickRun'}
 Plug 'tpope/vim-commentary'
@@ -191,5 +188,3 @@ syntax enable
 let g:better_whitespace_enabled = 0
 let g:strip_whitespace_on_save = 1
 let g:strip_whitespace_confirm = 0
-let g:deoplete#enable_at_startup = 0
-autocmd InsertEnter * call deoplete#enable()

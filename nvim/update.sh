@@ -2,6 +2,6 @@
 
 echo "--- Neovim update start ---"
 
-nvim +'PlugUpgrade | PlugUpdate | PlugClean! | qa' &> /dev/null
+nvim +'PlugUpgrade | PlugUpdate | PlugClean! | CocUpdate | qa' &> /dev/null
 
 echo "--- Neovim update end ---"

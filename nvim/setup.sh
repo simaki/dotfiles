@@ -14,5 +14,9 @@ mkdir -p $HOME/.config/nvim/ftplugin
 mkdir -p $HOME/.config/nvim/template
 ln -fs $HOME/dotfiles/nvim/init.vim $HOME/.config/nvim
 ln -fs $HOME/dotfiles/nvim/ftplugin/* $HOME/.config/nvim/ftplugin
+ln -fs $HOME/dotfiles/nvim/coc-settings.json $HOME/.config/nvim
+
+nvim +'CocInstall coc-clangd | qa' &> /dev/null
+nvim +'CocInstall coc-jedi | qa' &> /dev/null
 
 echo "--- Neovim setup end ---"
