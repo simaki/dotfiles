@@ -2,8 +2,6 @@
 
 [![CI](https://github.com/simaki/dotfiles/workflows/CI/badge.svg)](https://github.com/simaki/dotfiles/actions?query=workflow%3ACI)
 
-The following one-liner completes an environment setup.
-
 ```sh
 $ curl -fsS https://raw.githubusercontent.com/simaki/dotfiles/sync/install.sh | sh
 ```
