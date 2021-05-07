@@ -1,0 +1,8 @@
+#!/bin/sh -e
+
+if [ -z "$1" ]; then
+  echo "rustrun: Compile and run cpp. Usage: cpprun [PATH]"
+else
+  out=$(basename $1 .rs).out
+  rustc -o $out $1 && ./$out
+fi
