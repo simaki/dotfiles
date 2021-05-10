@@ -30,10 +30,6 @@ let g:vimtex_compiler_method = 'tectonic'
 " let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:vimtex_motion_matchparen = 0
 
-call deoplete#custom#var('omni', 'input_patterns', {
-			\ 'tex': g:vimtex#re#deoplete
-			\ })
-
 nnoremap e o\begin{align*}<CR><CR>\end{align*}<Up><TAB>
 nnoremap E o\begin{align}<CR><CR>\end{align}<Up><TAB>
 
