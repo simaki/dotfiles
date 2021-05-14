@@ -6,14 +6,13 @@
     "editor.detectIndentation": false,
     "editor.fontFamily": "Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 10,
+    "editor.lightbulb.enabled": false,
     "editor.lineNumbers": "off",
     "editor.minimap.enabled": false,
-    "editor.minimap.renderCharacters": false,
     "editor.occurrencesHighlight": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.smoothScrolling": true,
-    "editor.lightbulb.enabled": false,
     "editor.suggestSelection": "first",
     "editor.wordWrap": "on",
     "files.exclude": {
@@ -32,35 +31,22 @@
     "jupyter.alwaysTrustNotebooks": true,
     "jupyter.askForKernelRestart": false,
     "markdown.preview.doubleClickToSwitchToEditor": false,
-    "python.defaultInterpreterPath": "\"$(brew --prefix)/bin/python@${PYTHON_VERSION}:$PATH\"",
-    "python.formatting.blackArgs": ["--line-length", "88", "--skip-magic-trailing-comma"],
-    "python.formatting.blackPath": "/usr/local/bin/black",
-    "python.formatting.provider": "black",
-    "python.pythonPath": "/usr/local/bin/python3",
-    "python.sortImports.args": ["--force-single-line"],
-    "python.linting.enabled": false,
-    "python.linting.pylintEnabled": false,
-    "python.linting.flake8Args": ["--max-line-length", "88", "--ignore=E203,W503"],
-    "python.linting.lintOnSave": false,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
-    },
     "scm.diffDecorationsGutterVisibility": "hover",
     "terminal.integrated.fontSize": 10,
     "vim.normalModeKeyBindingsNonRecursive": [
         // nnoremap
-        {"before": ["H"], "after": ["0"]},
-        {"before": ["L"], "after": ["$"]},
-        {"before": ["Y"], "after": ["y", "$"]},
-        {"before": ["K"], "after": ["i", "<CR>", "<Esc>"]},
-        {"before": ["+"], "after": ["<C-a>"]},
         {"before": ["-"], "after": ["<C-x>"]},
+        {"before": ["+"], "after": ["<C-a>"]},
         {"before": ["<CR>"], "after": ["o", "<Esc>"]},
-        {"before": ["<TAB>"], "after": ["i", "<TAB>", "Esc"]},
+        {"before": ["<Esc>", "<Esc>"], "after": [":", "n", "o", "h", "<CR>", "<Esc>"]},
         {"before": ["<SPACE>"], "after": ["i", "<SPACE>", "Esc", "l"]},
+        {"before": ["<TAB>"], "after": ["i", "<TAB>", "Esc"]},
+        {"before": ["H"], "after": ["0"]},
+        {"before": ["K"], "after": ["i", "<CR>", "<Esc>"]},
+        {"before": ["L"], "after": ["$"]},
         {"before": ["n"], "after": ["n", "z", "z"]},
         {"before": ["N"], "after": ["N", "z", "z"]},
-        {"before": ["<Esc>", "<Esc>"], "after": [":", "n", "o", "h", "<CR>", "<Esc>"]},
+        {"before": ["Y"], "after": ["y", "$"]},
         // TODO: enable it only when python
         {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
     ],
@@ -72,33 +58,56 @@
     "vim.ignorecase": true,
     "vim.smartcase": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.colorTheme": "GitHub Light Default",
-    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-    "workbench.iconTheme": null,
+    "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         // Theme color: https://code.visualstudio.com/api/references/theme-color
         // GitHub Color System: https://primer.style/css/support/color-system
-        // color-scale-red-1
-        "editorError.foreground": "#ffdce0",
-        // color-scale-red-2
-        // "editorError.foreground": "#fdaeb7",
-        // color-scale-yellow-1
-        "editorWarning.foreground": "#fffbdd",
-        // color-scale-yellow-2
-        // "editorWarning.foreground": "#fff5b1",
+        "editorError.foreground": "#ffdce0", // color-scale-red-1
+        "editorWarning.foreground": "#fffbdd", // color-scale-yellow-1
     },
-    "workbench.activityBar.visible": false,
-    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "GitHub Light Default",
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter-notebook",
             "filenamePattern": "*.ipynb"
         }
     ],
-    "python.insidersChannel": "weekly",
-    "python.analysis.typeCheckingMode": "basic",
-    "python.languageServer": "Pylance",
-    "go.toolsManagement.autoUpdate": true,
+    "workbench.iconTheme": null,
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.startupEditor": "none",
+    // --- extensions ---
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.clang_format_style": "Google",
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
     "go.lintOnSave": "file",
+    "go.toolsManagement.autoUpdate": true,
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.trailingComma": true,
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.autoComplete.addBrackets": true,
+    "python.defaultInterpreterPath": "\"$(brew --prefix)/bin/python@${PYTHON_VERSION}:$PATH\"",
+    "python.formatting.blackArgs": ["--skip-magic-trailing-comma"],
+    "python.formatting.blackPath": "/usr/local/bin/black",
+    "python.formatting.provider": "black",
+    "python.insidersChannel": "daily",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.flake8Args": ["--max-line-length", "88", "--ignore=E203,W503"],
+    "python.linting.lintOnSave": false,
+    "python.linting.pylintEnabled": true,
+    "python.poetryPath": "/usr/local/bin/poetry",
+    "python.pythonPath": "\"$(brew --prefix)/bin/python@${PYTHON_VERSION}:$PATH\"",
+    "python.sortImports.args": ["--force-single-line"],
+    "python.sortImports.path": "/usr/local/bin/isort",
+    "python.testing.pytestEnabled": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
+        ],
+    },
 }
