@@ -58,6 +58,7 @@ nnoremap <C-p> :bp<CR>
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap Y y$
+vnoremap Y y$
 nnoremap K i<CR><ESC>
 nnoremap + <C-a>
 nnoremap - <C-x>
@@ -66,7 +67,6 @@ nnoremap <TAB> i<TAB><ESC>
 nnoremap <SPACE> i<SPACE><ESC>l
 nnoremap <ESC><ESC> :noh<CR><ESC>
 inoremap jk <Esc>
-vnoremap Y y$
 
 command! -buffer W :w
 command! -buffer Wq :wq

@@ -33,6 +33,27 @@
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "scm.diffDecorationsGutterVisibility": "hover",
     "terminal.integrated.fontSize": 10,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.activityBar.visible": false,
+    "workbench.colorCustomizations": {
+        "editorError.foreground": "#fdaeb7",
+        "editorWarning.foreground": "#fff5b1",
+        "statusBar.background": "#ffffff",
+        "statusBar.noFolderBackground": "#ffffff",
+        "statusBar.debuggingBackground": "#ffffff",
+        "statusBar.foreground": "#000000"
+    },
+    "workbench.colorTheme": "GitHub Light Default",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter-notebook",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "workbench.iconTheme": null,
+    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
+    "workbench.startupEditor": "none",
+    // --- extensions ---
     "vim.normalModeKeyBindingsNonRecursive": [
         // nnoremap
         {"before": ["-"], "after": ["<C-x>"]},
@@ -47,38 +68,47 @@
         {"before": ["n"], "after": ["n", "z", "z"]},
         {"before": ["N"], "after": ["N", "z", "z"]},
         {"before": ["Y"], "after": ["y", "$"]},
-        // TODO: enable it only when python
-        {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
+        // {"before": ["<C-h>"], "after": ["<C-w>", "h"]},
+        // {"before": ["<C-j>"], "after": ["<C-w>", "j"]},
+        // {"before": ["<C-k>"], "after": ["<C-w>", "k"]},
+        // {"before": ["<C-l>"], "after": ["<C-w>", "l"]},
+        {"before": ["<Leader>", "p"], "commands": ["workbench.action.showCommands"]},
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         // inoremap
         {"before": ["j", "k"], "after": ["<Esc>"]}
     ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // vnoremap
+        {"before": ["Y"], "after": ["y", "$"]},
+    ],
+    "vim.highlightedyank.enable": true,
+    // GitHub Color System: https://primer.style/css/support/color-system color-scale-blue-1
+    "vim.highlightedyank.color": "#dbedff",
     "vim.hlsearch": true,
     "vim.ignorecase": true,
     "vim.smartcase": true,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.activityBar.visible": false,
-    "workbench.colorCustomizations": {
-        // Theme color: https://code.visualstudio.com/api/references/theme-color
-        // GitHub Color System: https://primer.style/css/support/color-system
-        "editorError.foreground": "#ffdce0", // color-scale-red-1
-        "editorWarning.foreground": "#fffbdd", // color-scale-yellow-1
-    },
-    "workbench.colorTheme": "GitHub Light Default",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "workbench.iconTheme": null,
-    "workbench.preferredDarkColorTheme": "GitHub Dark Default",
-    "workbench.startupEditor": "none",
-    // --- extensions ---
+    // Vim status bar
+    // "vim.statusBarColorControl": true,
+    "vim.statusBarColorControl": false,
+    "vim.statusBarColors.normal": "#ffffff",
+    "vim.statusBarColors.insert": "#dbedff", // color-scale-blue-1
+    // "vim.statusBarColors.insert": "#c8e1ff", // color-scale-blue-2
+    "vim.statusBarColors.visual": "#fedbf0", // color-scale-pink-1
+    "vim.statusBarColors.visualline": "#fedbf0", // color-scale-pink-1
+    "vim.statusBarColors.visualblock": "#fedbf0", // color-scale-pink-1
+    "vim.statusBarColors.replace": "#ffdce0", // color-scale-red-0
+    "vim.statusBarColors.commandlineinprogress": "#ffffff",
+    "vim.statusBarColors.searchinprogressmode": "#ffffff",
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "Google",
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+    "[C_cpp]": {
+        // "editor.defaultFormatter": "",
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
+        ],
+    },
     "go.lintOnSave": "file",
     "go.toolsManagement.autoUpdate": true,
     "latex-workshop.bibtex-fields.sort.enabled": true,
