@@ -1,6 +1,7 @@
 {
     "breadcrumbs.enabled": false,
     "debug.console.fontSize": 10,
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorBlinking": "solid",
     "editor.cursorSurroundingLines": 16,
     "editor.detectIndentation": false,
@@ -39,9 +40,9 @@
         "editorError.foreground": "#fdaeb7",
         "editorWarning.foreground": "#fff5b1",
         "statusBar.background": "#ffffff",
-        "statusBar.noFolderBackground": "#ffffff",
         "statusBar.debuggingBackground": "#ffffff",
-        "statusBar.foreground": "#000000"
+        "statusBar.foreground": "#000000",
+        "statusBar.noFolderBackground": "#ffffff"
     },
     "workbench.colorTheme": "GitHub Light Default",
     "workbench.editorAssociations": [
@@ -72,7 +73,7 @@
         // {"before": ["<C-j>"], "after": ["<C-w>", "j"]},
         // {"before": ["<C-k>"], "after": ["<C-w>", "k"]},
         // {"before": ["<C-l>"], "after": ["<C-w>", "l"]},
-        {"before": ["<Leader>", "p"], "commands": ["workbench.action.showCommands"]},
+        {"before": ["<Leader>", "p"], "commands": ["workbench.action.showCommands"]}
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         // inoremap
@@ -80,7 +81,7 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         // vnoremap
-        {"before": ["Y"], "after": ["y", "$"]},
+        {"before": ["Y"], "after": ["y", "$"]}
     ],
     "vim.highlightedyank.enable": true,
     // GitHub Color System: https://primer.style/css/support/color-system color-scale-blue-1
