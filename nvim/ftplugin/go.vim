@@ -1,2 +1,2 @@
-autocmd BufWritePost,FileWritePost *.go :GoFmt
-cnoreabbrev fmt GoFmt
+" autocmd BufWritePost,FileWritePost *.go :GoFmt
+" cnoreabbrev fmt GoFmt
