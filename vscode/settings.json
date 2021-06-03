@@ -117,6 +117,18 @@
     "latex-workshop.bibtex-format.trailingComma": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.tools": [
+        {"name": "latexmk", "command": "latexmk", "args": ["%DOC%"]},
+        {"name": "latexmk-clean", "command": "latexmk", "args": ["-c", "%DOC%"]},
+        {"name": "tectonic", "command": "tectonic", "args": ["%TEX%"]}
+    ],
+    "latex-workshop.latex.recipes": [
+        {"name": "latexmk", "tools": ["latexmk"]},
+        // {"name": "latexmk", "tools": ["latexmk", "latexmk-clean"]},
+        {"name": "tectonic", "tools": ["tectonic"]}
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.autoComplete.addBrackets": true,
@@ -140,5 +152,8 @@
         "vim.normalModeKeyBindingsNonRecursive": [
             {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
         ]
+    },
+    "[latex]": {
+        "editor.formatOnSave": true,
     }
 }
