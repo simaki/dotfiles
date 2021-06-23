@@ -18,10 +18,9 @@
   cof = checkout-fzf
   pl = pull
   ps = push
+  init = init --quiet
   reword = !git commit --amend --only
   s = status --short
-  # Fuzzy-find a resource and then add.
-  # Fuzzy-find a branch and then checkout.
   add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
   checkout-fzf = "!__checkout_fzf() { \
     local branches branch; \
