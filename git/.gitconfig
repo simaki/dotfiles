@@ -9,20 +9,20 @@
   rebase = false
 [alias]
   a = add
+  af = add-fzf
   ap = add --patch
   b = branch
   c = commit --quiet -m
-  s = status --short
-  pl = pull
-  ps = push
   co = checkout --quiet
   cob = checkout -b
   cof = checkout-fzf
-  af = add-fzf
+  pl = pull
+  ps = push
   reword = !git commit --amend --only
+  s = status --short
   # Fuzzy-find a resource and then add.
-  add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
   # Fuzzy-find a branch and then checkout.
+  add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
   checkout-fzf = "!__checkout_fzf() { \
     local branches branch; \
     branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
