@@ -17,12 +17,12 @@ ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-vscode.cpptools
+nickfode.latex-formatter
 redhat.java
 redhat.vscode-commons
 redhat.vscode-yaml
 rust-lang.rust
 shd101wyy.markdown-preview-enhanced
-tomoki1207.pdf
 Tyriar.sort-lines
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug

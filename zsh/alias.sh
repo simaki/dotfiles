@@ -4,7 +4,7 @@ alias ls='ls -FG'
 alias mv='mv -i'
 alias cp='cp -i'
 alias ll='rm .DS_Store &>/dev/null; ls -alG'
-alias sourcerc='source ~/.zshrc'
+alias tree='tree -C'
 
 alias vimf='nvim $(find . -type d -maxdepth 5 -not -path "*/.git/*" 2> /dev/null | fzf || echo .)'
 alias lsf='ls $(find . -type d -maxdepth 5 -not -path "*/.git/*" 2> /dev/null | fzf || echo .)'

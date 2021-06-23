@@ -1,0 +1,20 @@
+{
+    "align": {
+        "prefix": "align",
+        "body": [
+            "\\begin{align}",
+            "\t$1",
+            "\\end{align}"
+        ],
+        "description": "Insert align environment"
+    },
+    "align*": {
+        "prefix": "align*",
+        "body": [
+            "\\begin{align*}",
+            "\t$1",
+            "\\end{align*}"
+        ],
+        "description": "Insert align environment"
+    }
+}

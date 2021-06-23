@@ -9,3 +9,4 @@ source ${$(readlink $HOME/.zshrc)%/*}/export.sh
 if [ -e ~/.zshrc_private ]; then
   source ~/.zshrc_private
 fi
+
