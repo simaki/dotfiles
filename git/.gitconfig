@@ -9,9 +9,10 @@
   rebase = false
 [alias]
   a = add
+  ap = add --patch
   b = branch
   c = commit -m
-  s = status
+  s = status --short
   pl = pull
   ps = push
   co = checkout
