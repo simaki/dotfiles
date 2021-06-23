@@ -15,7 +15,7 @@
   s = status --short
   pl = pull
   ps = push
-  co = checkout
+  co = checkout --quiet
   cob = checkout -b
   cof = checkout-fzf
   af = add-fzf
