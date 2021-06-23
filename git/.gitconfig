@@ -11,7 +11,7 @@
   a = add
   ap = add --patch
   b = branch
-  c = commit -m
+  c = commit --quiet -m
   s = status --short
   pl = pull
   ps = push
