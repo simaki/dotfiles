@@ -24,13 +24,16 @@
   add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
   checkout-fzf = "!__checkout_fzf() { \
     local branches branch; \
-    branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
+    branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout --quiet $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
   }; __checkout_fzf"
   # Delete merged branches.
   delete-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   # Show git-flight-rules.
   flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > /tmp/git-flight-rules.md \
     && view +$(grep -n \"$(grep '^###' /tmp/git-flight-rules.md | sort | fzf)\" /tmp/git-flight-rules.md | cut -f1 -d:) /tmp/git-flight-rules.md"
+  hub = !gh repo view --web
+  issue = !gh issue list
+  pr = !gh pr list
 [init]
   defaultBranch = main
 [github]
