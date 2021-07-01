@@ -1,2 +1,2 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin
-0 3 * * * sh $HOME/update.sh >& $HOME/.cron.log
+0 3 * * * sh $HOME/update.sh &> $HOME/.cronlog/$(date '+%Y%m%d%H%M').log
