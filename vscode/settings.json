@@ -3,7 +3,9 @@
     "debug.console.fontSize": 10,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorBlinking": "solid",
-"editor.cursorSurroundingLines": 16,
+    "editor.cursorStyle": "line",
+    "editor.cursorSurroundingLines": 16,
+    "editor.detectIndentation": false,
     "editor.fontFamily": "SF Mono, Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 10,
     "editor.lightbulb.enabled": false,
@@ -14,7 +16,10 @@
     "editor.renderLineHighlight": "none",
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
     "editor.wordWrap": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "files.exclude": {
         "**/.ipynb_checkpoints": true,
         "**/.pytest_cache": true,
@@ -28,7 +33,6 @@
     },
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
-    "jupyter.alwaysTrustNotebooks": true,
     "jupyter.askForKernelRestart": false,
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "scm.diffDecorationsGutterVisibility": "hover",
@@ -100,12 +104,6 @@
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "Google",
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
-    "[C_cpp]": {
-        // "editor.defaultFormatter": "",
-        "vim.normalModeKeyBindingsNonRecursive": [
-            {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
-        ],
-    },
     "go.lintOnSave": "file",
     "go.toolsManagement.autoUpdate": true,
     "latex-workshop.bibtex-fields.sort.enabled": true,
@@ -151,14 +149,15 @@
     },
     "[latex]": {
         "editor.formatOnSave": true,
-},
-"editor.cursorStyle": "line",
-"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-"editor.detectIndentation": false,
-"files.insertFinalNewline": true,
-"files.trimFinalNewlines": true,
-"notebook.cellToolbarLocation": {
-    "default": "right",
-    "jupyter-notebook": "left"
-}
+    },
+    "[C_cpp]": {
+        // "editor.defaultFormatter": "",
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
+        ],
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
 }
