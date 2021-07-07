@@ -9,28 +9,31 @@
   rebase = false
 [alias]
   a = add
+  af = add-fzf
+  ap = add --patch
   b = branch
-  c = commit -m
-  s = status
-  pl = pull
-  ps = push
-  co = checkout
+  c = commit --quiet -m
+  co = checkout --quiet
   cob = checkout -b
   cof = checkout-fzf
-  af = add-fzf
+  pl = pull
+  ps = push
+  init = init --quiet
   reword = !git commit --amend --only
-  # Fuzzy-find a resource and then add.
+  s = status --short
   add-fzf = !find $(git rev-parse --show-toplevel) | fzf | git add
-  # Fuzzy-find a branch and then checkout.
   checkout-fzf = "!__checkout_fzf() { \
     local branches branch; \
-    branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
+    branches=$(git --no-pager branch -vv) && branch=$(echo \"$branches\" | fzf +m) && git checkout --quiet $(echo \"$branch\" | awk '{print $1}' | sed \"s/.* //\"); \
   }; __checkout_fzf"
   # Delete merged branches.
   delete-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
   # Show git-flight-rules.
   flight = "!curl -fs https://raw.githubusercontent.com/k88hudson/git-flight-rules/master/README.md > /tmp/git-flight-rules.md \
     && view +$(grep -n \"$(grep '^###' /tmp/git-flight-rules.md | sort | fzf)\" /tmp/git-flight-rules.md | cut -f1 -d:) /tmp/git-flight-rules.md"
+  hub = !gh repo view --web
+  issue = !gh issue list
+  pr = !gh pr list
 [init]
   defaultBranch = main
 [github]

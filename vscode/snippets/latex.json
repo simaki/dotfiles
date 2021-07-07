@@ -1,0 +1,18 @@
+{
+    "align": {
+        "prefix": "align",
+        "body": [
+            "\\begin{align}",
+            "\t$1",
+            "\\end{align}"
+        ],
+        "description": "Insert align environment"
+    },
+    "\\alpha": {"prefix": "aa", "body": ["\\alpha"], "description": "\\alpha"},
+    "\\beta": {"prefix": "bb", "body": ["\\beta"], "description": "\\beta"},
+    "\\mu": {"prefix": "mm", "body": ["\\mu"], "description": "\\mu"},
+    "\\nu": {"prefix": "nn", "body": ["\\nu"], "description": "\\nu"},
+    "\\omega": {"prefix": "oo", "body": ["\\omega"], "description": "\\omega"},
+    "\\rho": {"prefix": "rr", "body": ["\\rho"], "description": "\\rho"},
+    "\\sigma": {"prefix": "ss", "body": ["\\sigma"], "description": "\\sigma"},
+}

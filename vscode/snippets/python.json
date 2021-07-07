@@ -1,0 +1,31 @@
+{
+    "import pandas as pd": {
+        "prefix": "pandas",
+        "body": [
+            "import pandas as pd"
+        ],
+        "description": "import pandas as pd"
+    },
+    "import numpy as np": {
+        "prefix": "numpy",
+        "body": [
+            "import numpy as np"
+        ],
+        "description": "import numpy as np"
+    },
+    "import matplotlib.pyplot as plt": {
+        "prefix": "matplotlib",
+        "body": [
+            "import matplotlib.pyplot as plt"
+        ],
+        "description": "import matplotlib.pyplot as plt"
+    },
+    "if __name__ == \"__main__\":": {
+        "prefix": "ifmain",
+        "body": [
+            "if __name__ == \"__main__\":",
+            "\t$1"
+        ],
+        "description": "if __name__ == \"__main__\":"
+    },
+}

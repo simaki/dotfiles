@@ -1,4 +1,3 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
     {
         "key": "= =",
@@ -164,5 +163,9 @@
         "key": "c d",
         "command": "jupyter.changeCellToCode",
         "when": "editorTextFocus && jupyter.hascodecells && !notebookEditorFocused"
+    },
+    {
+        "key": "ctrl + tab",
+        "command": "workbench.action.nextEditor"
     }
 ]

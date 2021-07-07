@@ -1,20 +1,25 @@
 {
     "breadcrumbs.enabled": false,
     "debug.console.fontSize": 10,
+    "editor.acceptSuggestionOnEnter": "off",
     "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "line",
     "editor.cursorSurroundingLines": 16,
     "editor.detectIndentation": false,
-    "editor.fontFamily": "Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "SF Mono, Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 10,
     "editor.lightbulb.enabled": false,
-    "editor.lineNumbers": "off",
+    "editor.lineNumbers": "on",
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
-    "editor.wordWrap": "on",
+    "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+    "editor.wordWrap": "off",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "files.exclude": {
         "**/.ipynb_checkpoints": true,
         "**/.pytest_cache": true,
@@ -28,7 +33,6 @@
     },
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
-    "jupyter.alwaysTrustNotebooks": true,
     "jupyter.askForKernelRestart": false,
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "scm.diffDecorationsGutterVisibility": "hover",
@@ -39,17 +43,14 @@
         "editorError.foreground": "#fdaeb7",
         "editorWarning.foreground": "#fff5b1",
         "statusBar.background": "#ffffff",
-        "statusBar.noFolderBackground": "#ffffff",
         "statusBar.debuggingBackground": "#ffffff",
-        "statusBar.foreground": "#000000"
+        "statusBar.foreground": "#000000",
+        "statusBar.noFolderBackground": "#ffffff"
     },
     "workbench.colorTheme": "GitHub Light Default",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter-notebook",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "workbench.iconTheme": null,
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "workbench.startupEditor": "none",
@@ -72,7 +73,7 @@
         // {"before": ["<C-j>"], "after": ["<C-w>", "j"]},
         // {"before": ["<C-k>"], "after": ["<C-w>", "k"]},
         // {"before": ["<C-l>"], "after": ["<C-w>", "l"]},
-        {"before": ["<Leader>", "p"], "commands": ["workbench.action.showCommands"]},
+        {"before": ["<Leader>", "p"], "commands": ["workbench.action.showCommands"]}
     ],
     "vim.insertModeKeyBindingsNonRecursive": [
         // inoremap
@@ -80,7 +81,7 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         // vnoremap
-        {"before": ["Y"], "after": ["y", "$"]},
+        {"before": ["Y"], "after": ["y", "$"]}
     ],
     "vim.highlightedyank.enable": true,
     // GitHub Color System: https://primer.style/css/support/color-system color-scale-blue-1
@@ -103,12 +104,6 @@
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "Google",
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
-    "[C_cpp]": {
-        // "editor.defaultFormatter": "",
-        "vim.normalModeKeyBindingsNonRecursive": [
-            {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
-        ],
-    },
     "go.lintOnSave": "file",
     "go.toolsManagement.autoUpdate": true,
     "latex-workshop.bibtex-fields.sort.enabled": true,
@@ -116,6 +111,18 @@
     "latex-workshop.bibtex-format.trailingComma": true,
     "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.tools": [
+        {"name": "latexmk", "command": "latexmk", "args": ["%DOC%"]},
+        {"name": "latexmk-clean", "command": "latexmk", "args": ["-c", "%DOC%"]},
+        {"name": "tectonic", "command": "tectonic", "args": ["%TEX%"]}
+    ],
+    "latex-workshop.latex.recipes": [
+        {"name": "latexmk", "tools": ["latexmk"]},
+        // {"name": "latexmk", "tools": ["latexmk", "latexmk-clean"]},
+        {"name": "tectonic", "tools": ["tectonic"]}
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.synctex.afterBuild.enabled": true,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.autoComplete.addBrackets": true,
@@ -138,6 +145,19 @@
         "editor.defaultFormatter": "ms-python.python",
         "vim.normalModeKeyBindingsNonRecursive": [
             {"before": ["<Leader>", "r"], "commands": ["python.execInTerminal"]}
+        ]
+    },
+    "[latex]": {
+        "editor.formatOnSave": true,
+    },
+    "[C_cpp]": {
+        // "editor.defaultFormatter": "",
+        "vim.normalModeKeyBindingsNonRecursive": [
+            {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
         ],
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
     },
 }
