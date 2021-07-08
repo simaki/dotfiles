@@ -10,3 +10,7 @@ if [ -e ~/.zshrc_private ]; then
   source ~/.zshrc_private
 fi
 
+# Add zsh completions
+if [ -e /usr/local/share/zsh-completions ]; then
+    fpath=(/usr/local/share/zsh-completions $fpath)
+fi
