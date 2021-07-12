@@ -8,12 +8,14 @@
     "editor.detectIndentation": false,
     "editor.fontFamily": "SF Mono, Roboto Mono, Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 10,
+    "editor.inlineSuggest.enabled": true,
     "editor.lightbulb.enabled": false,
     "editor.lineNumbers": "on",
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
     "editor.renderIndentGuides": false,
     "editor.renderLineHighlight": "none",
+    "editor.scrollbar.verticalScrollbarSize": 12,
     "editor.smoothScrolling": true,
     "editor.suggestSelection": "first",
     "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
@@ -37,7 +39,6 @@
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "scm.diffDecorationsGutterVisibility": "hover",
     "terminal.integrated.fontSize": 10,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.activityBar.visible": false,
     "workbench.colorCustomizations": {
         "editorError.foreground": "#fdaeb7",
@@ -54,7 +55,7 @@
     "workbench.iconTheme": null,
     "workbench.preferredDarkColorTheme": "GitHub Dark Default",
     "workbench.startupEditor": "none",
-    // --- extensions ---
+    // extensions
     "vim.normalModeKeyBindingsNonRecursive": [
         // nnoremap
         {"before": ["-"], "after": ["<C-x>"]},
@@ -92,15 +93,15 @@
     // Vim status bar
     // "vim.statusBarColorControl": true,
     "vim.statusBarColorControl": false,
-    "vim.statusBarColors.normal": "#ffffff",
-    "vim.statusBarColors.insert": "#dbedff", // color-scale-blue-1
+    // "vim.statusBarColors.normal": "#ffffff",
+    // "vim.statusBarColors.insert": "#dbedff", // color-scale-blue-1
     // "vim.statusBarColors.insert": "#c8e1ff", // color-scale-blue-2
-    "vim.statusBarColors.visual": "#fedbf0", // color-scale-pink-1
-    "vim.statusBarColors.visualline": "#fedbf0", // color-scale-pink-1
-    "vim.statusBarColors.visualblock": "#fedbf0", // color-scale-pink-1
-    "vim.statusBarColors.replace": "#ffdce0", // color-scale-red-0
-    "vim.statusBarColors.commandlineinprogress": "#ffffff",
-    "vim.statusBarColors.searchinprogressmode": "#ffffff",
+    // "vim.statusBarColors.visual": "#fedbf0", // color-scale-pink-1
+    // "vim.statusBarColors.visualline": "#fedbf0", // color-scale-pink-1
+    // "vim.statusBarColors.visualblock": "#fedbf0", // color-scale-pink-1
+    // "vim.statusBarColors.replace": "#ffdce0", // color-scale-red-0
+    // "vim.statusBarColors.commandlineinprogress": "#ffffff",
+    // "vim.statusBarColors.searchinprogressmode": "#ffffff",
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "Google",
     "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
@@ -109,7 +110,6 @@
     "latex-workshop.bibtex-fields.sort.enabled": true,
     "latex-workshop.bibtex-format.sort.enabled": true,
     "latex-workshop.bibtex-format.trailingComma": true,
-    "latex-workshop.latex.autoBuild.run": "onSave",
     "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.tools": [
         {"name": "latexmk", "command": "latexmk", "args": ["%DOC%"]},
@@ -141,6 +141,12 @@
     "python.sortImports.args": ["--force-single-line"],
     "python.sortImports.path": "/usr/local/bin/isort",
     "python.testing.pytestEnabled": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "jupyter.themeMatplotlibPlots": true,
+    "jupyter.enableNativeInteractiveWindow": true,
     "[python]": {
         "editor.defaultFormatter": "ms-python.python",
         "vim.normalModeKeyBindingsNonRecursive": [
@@ -148,17 +154,14 @@
         ]
     },
     "[latex]": {
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": false
     },
     "[C_cpp]": {
         // "editor.defaultFormatter": "",
         "vim.normalModeKeyBindingsNonRecursive": [
             {"before": ["<Leader>", "r"], "commands": ["C_Cpp.execInTerminal"]}
-        ],
+        ]
     },
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "editor.inlineSuggest.enabled": true,
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+    "latex-workshop.latex.autoBuild.interval": 100,
 }
