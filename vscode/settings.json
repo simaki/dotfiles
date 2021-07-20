@@ -164,4 +164,5 @@
     },
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
     "latex-workshop.latex.autoBuild.interval": 100,
+    "update.showReleaseNotes": false,
 }
