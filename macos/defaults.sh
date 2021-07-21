@@ -1,8 +1,7 @@
 #!bin/sh
 
-# Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-# Possible values: `WhenScrolling`, `Automatic` and `Always`
+# Show scroll bars: `Automatic`, `WhenScrolling`, `Always`
+defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
