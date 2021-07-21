@@ -1,2 +1,2 @@
-* Install SFPro, SFMono, NY: https://developer.apple.com/fonts/
+* Install SF and NY: https://developer.apple.com/fonts/
 * Google Chrome, Customize fonts: chrome://settings/fonts

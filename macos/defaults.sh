@@ -27,7 +27,7 @@ defaults write -g com.apple.trackpad.scaling 3
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
-# 
+#
 defaults write -g NSWindowResizeTime -float 0.001
 
 # KeyRepeat
@@ -44,8 +44,11 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 
-# TextEdit.app: Preferences > Format: "Plain text"
+# TextEdit.app: Preferences > New Document > Format: "Plain text"
 defaults write com.apple.TextEdit RichText -int 0
+
+# TextEdit.app: Preferences > New Document > Options: DISABLE Show ruler
+defaults write com.apple.TextEdit ShowRuler 0
 
 # Finder: Preferences > Advanced > ENABLE Show all filename extensions
 defaults write -g AppleShowAllExtensions -bool true
