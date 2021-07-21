@@ -30,18 +30,25 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # 
 defaults write -g NSWindowResizeTime -float 0.001
 
+# KeyRepeat
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
 # Finder - Set Desktop as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # Finder - Enable "Show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Visual Studio Code: Key Repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 
-# TextEdit.app > Preferences > Format: "Plain text"
+# TextEdit.app: Preferences > Format: "Plain text"
 defaults write com.apple.TextEdit RichText -int 0
 
-# Finder > Preferences > Advanced > ENABLE Show all filename extensions
+# Finder: Preferences > Advanced > ENABLE Show all filename extensions
 defaults write -g AppleShowAllExtensions -bool true
+
+# Skim.app >
+defaults write -app Skim SKAutoReloadFileUpdate -boolean true
