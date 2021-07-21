@@ -21,6 +21,9 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Preferences > Mission Controll > Mission Controll: DISABLE Automatically rearrange spaces based on most recent use
 defaults write com.apple.dock mru-spaces -bool false
 
+# Preferences > Trackpad > Point & Click: Fastest racking speed
+defaults write -g com.apple.trackpad.scaling 3
+
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
