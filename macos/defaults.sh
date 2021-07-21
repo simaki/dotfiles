@@ -1,28 +1,28 @@
 #!bin/sh
 
-# Show scroll bars: `Automatic`, `WhenScrolling`, `Always`
+# Preferences > General > Show scroll bars: `Automatic`, `WhenScrolling`, `Always`
 defaults write NSGlobalDomain AppleShowScrollBars -string "Automatic"
+
+# Preferences > Keyboard > Text: DISABLE Correct spelling automatically
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Preferences > Keyboard > Text: DISABLE Capitalize words automatically
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Preferences > Keyboard > Text: DISABLE Add period with double-space
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
+# Preferences > Keyboard > Text: DISABLE Use smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Preferences > Keyboard > Text: DISABLE Use smart quotes and dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Preferences > Mission Controll > Mission Controll: DISABLE Automatically rearrange spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-# Disable automatic capitalization as it’s annoying when typing code
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-
-# Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-# Disable automatic period substitution as it’s annoying when typing code
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-
-# Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Mission Controll: Disable "Automatically rearrange spaces based on most recent use"
-defaults write com.apple.dock mru-spaces -bool false
 
 # Finder - Set Desktop as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
