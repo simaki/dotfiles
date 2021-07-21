@@ -4,6 +4,7 @@ cd `dirname $0`
 
 echo "--- Python setup start ---"
 
+export PYTHON_VERSION='3.9'
 echo "PYTHON_VERSION=${PYTHON_VERSION}"
 
 brew install python@${PYTHON_VERSION} && brew upgrade python@${PYTHON_VERSION} && python3 --version
