@@ -27,6 +27,9 @@ defaults write -g com.apple.trackpad.scaling 3
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
+# 
+defaults write -g NSWindowResizeTime -float 0.001
+
 # Finder - Set Desktop as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
@@ -36,3 +39,9 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
+
+# TextEdit.app > Preferences > Format: "Plain text"
+defaults write com.apple.TextEdit RichText -int 0
+
+# Finder > Preferences > Advanced > ENABLE Show all filename extensions
+defaults write -g AppleShowAllExtensions -bool true
